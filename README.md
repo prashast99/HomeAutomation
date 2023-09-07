@@ -21,8 +21,10 @@ Make the appropriate connections of the RaspberryPi sensors on the controller.
 
 ## Screenshots
 
+RaspberryPi Micro-controller
 ![RaspBerry](/Pics/Raspberry.png)
 
+DHT11 - Temperature & Humidity Sensor
 ![Sensor](/Pics/Sensor.jpg)
 
 ![Setup](/Pics/Setup.jpg)
