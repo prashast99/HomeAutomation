@@ -1,0 +1,51 @@
+#carouselExampleIndicators img
+{
+     height: 2% !important;
+     width: 100% !important;
+}
+
+.card img{
+    height: 190px;
+}
+.center
+{
+    text-align: center;
+}
+
+.section-contact h5 {
+    margin-bottom: 30px;
+}
+
+.section-follow .fab{
+
+    font-size: 2em;
+    margin: 5px 10px;
+    }
+    .section {
+        padding-top: 1rem;
+        padding-bottom: 1rem
+    }
+    .myblackdark
+{
+    background-color: #1d2125;
+    opacity: 2;
+}
+    .myblack
+    {
+        background-color: #24292f;
+    }
+
+    .white {
+        background-color: #fff !important
+    }
+    
+    .white-text {
+        color: #fff !important
+    }
+
+#carouselExampleIndicators{
+    height: 500px !important;
+}
+.carousel-inner{
+    height: 500px !important;
+}

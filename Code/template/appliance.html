@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="5" >
+  <title>IOT Home Automation | Appliances</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+
+</head>
+
+<body>
+
+  <!--Navigation Bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="https://images.squarespace-cdn.com/content/v1/5979e18715d5db259166db64/1605089936689-2BUDHY5RFZ2W1OI8GYKG/Coloured+Logo.png" height="25px" width="25px" class="mx-3">
+      <a class="navbar-brand" href="index.html">IOT Home Automation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>Appliances</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sensor.html">Temperature</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- LED Controls -->
+  <div class="container">
+    <div class="control py-4 mt-5">
+      <h3 class="text-center">Control Your Appliances</h3>
+      <hr>
+    </div>
+
+    <div class="container">
+      <div class="row my-3">
+        <div class="col-4">
+          <div class="card" style="width: 18rem;">
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBIVEhISEhUYEREREhIREhESEhESERERGBgZGRgYGBgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGBERGTQhGCExMTExNDQ0MTE0NDQ0NDE0NDQxMTQ0MTE0NDE0MTE0PzQxNDE0MTE0MT80ND80NDExNP/AABEIALIBGwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EAEUQAAIBAgMCCAoIBQQCAwAAAAECAAMRBBIhBTEGEyJBUWFxkTIzUnKBkqGxstIjJEJTc8HR8BU0YpPhFBai8YLCQ1Rj/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EACARAQEBAAICAwEBAQAAAAAAAAABEQJBITESQlGBYSL/2gAMAwEAAhEDEQA/AHcsgpOOIqeSnrN+kg4ip5Ceu3yzDaMsqySf9VU8lPXb5YHH4qotFqllVgwFgcwtcdQjRYiQYLDVs6K1rXF4e0ClpEvaRaBWRaWtOtArOk2nWkFbTpa060iotOkyIEyyyskGRYIJdYIGXUyNDJCrAKYVWkoOsMsWVo9s2kHqKp3ak20NgIaQsuHHOQPSJ6WjgKYGiL2soY95jKoBuAHYAJnR5QOvlDvE7jF8oesJ6wyhBk+Rjy3GL5Q7xKtPTuumuvbFf9NTJ1RfVF++PkvxeceWwvhH0Q21KQSoyqLLYEDouP1vFsM2p9Euo1ar2SYOLa5M13uVmRiV3yy+UxmuIO0NUEHabYpwyhmM22WR8tRLrYHMos49G4+yaWDx9KqCabh8tswB5SX3ZlOonVgW0V2yPqz+cvvEcMU23/K1POX4hM8vRPYOy/Fp2R9UvM7ZXi07JoYp2WmChykui3sDoSAdDCr8UZHFGAJqeWfVp/LKnjPvG9Wn8sBjijI4oxc8Z943q0/lkWqeW3dT+WPIZ4oyOLMWPGeW3dT+Wdy/Lbup/LIGeLM7izFTn8tu6n8sqWqeWfVp/LCmmpmUMXxDtxaEsS2c3bQX0bo0l6DkqCZnfOLgsm060kCUSBJE4SwEy0sol1EhRCLJRZRNvg5TvUZvJW3ef8THUT0XB5LIzdLW7h/mStN9Z0HmkF5kEMqTBmpKs8lWRZzA88lngc8jTK4Qpy0bpQjuP+ZmYbefRNjbouiN0MR3j/ExaTWv6BLGa1FNx1TKxe8zUTwfRMvF7zLxOTNqQdoR5SdXKsJ8SSGXIS6eGbhlXq03kDui2DxXF1OM+zez250Nr92/0RahtEgBBl0F239978++RVxWfQU8xbS6kqT3751c3uAQRcG4OoI3ERTbf8rU7V+IRbg+9TislQWNM2UXuQh3AnpGvsjW2v5V+1fiEzfSwpsnxadk0cb4tfxKfxCZ2yPFp2TSxvi1/Ep/EI6VSQZMgn9bwInWmJtThDTQWp5XfyiSKY7LeF7B1zLoDG4m5N0pk+E5KU7f0ourDt065pNelr46il89RFtvBYXHaOadh8bSfxdRH6kdWPcDM/D8GqAQrUBqlvCJJRQf6VU6e0zMx3BhEYGk4W5HJekj2XpDWB74Xy9SRKETJwzNTqUafGFxUzKUa2uVb5l05NtNOubBmQPFD6JPPPuaThfBEjF+KTzz7mk4TwROf2rfRiSJ06aRIlllRLAzLQqwiwSmEUyUGSek2Vyaa9dz3meaSejoNZQOgAQ0f4yVNWKGpKNUmbA21WUarEzUlGqzNU2asqKsTNSVWpIo+0mvSbqKn22/OYdN9e6a9dr03HSp90waL6900NpW0EzcUdTGQ+giWIaOLPIlUg5dzKTq5vL4kU9HZLHRTxZtfoJHVCbP4tSR5R0c9e5T0dvP2789qjNYXAF95JNu0Qy4Bt4cG438xnVzep2fozD+kadFj/mF21/K1O0fEsR2FTrC5qWyBbIwJzNqN4I3ab4/tn+Vqej4lkqwnsfxadk0sb4tfxKfxCZux/Fp2TSxvi1/ET4xJ0vahmFwgxDMVoIwBKio6lsrOtyAoNjlFxqSLbhzzenk+EfEmqzVMymmKarWS6vTuLgg863JHPr6ZpKDs7H0g/FvT/09YaZW5WYdIfnv/wBTfo1yP05jPLcUaqinUUYhGvkxFKwZT1j7J7Lg9HPCYXjaSlTVLrqFDIcy9V94PUYJXrWxibr8s7kJ1PX2RVmAzO5AAGZmbQACedq1ioVrHMzDINM7N0AR3aOzquIVVepxSgAtSRC+ZuktcX7LTJrtj42nicQ9QKfoCBTJJByuGzMR0kj3T0ZmNwf2CMMXbMWzhRYgC1iTzds2jLVgOM8Uvnn3NJwngiRjfFL5/wCTTsH4AnLut9GZMidNIkGSJEkSLF1MIpghLrIpqgRmW+645wBv6ToPTPUUME7AFWpkdVS5/wCII9s8ksIok9D2A2O5+2o/8Wb9JJ2G33g/tt808ohI3EjsNoZatTy29Zpdn4Zf1tY/ZbU0z58/KRbLSbTMwW55e4XvCrsJmUHjBqAfFtzjz55/EYioF1diMy6FmI3jmhP9RU8trdGdre+c/l/1nWLlzdbn+3m+8X+23zwZ2BUG5kPoZfyMxHrP5Tes0WquTvJPpmvH4nn9buIwLoCXZAtvvAD3NaeUpNqZNSCo6k+iZah7jdQIOtGaGGvYweJSxmuMTlSDSku0pOjnWe/BakWuXcf0oUC+0ExrB7FpUzcF36ne636bAATXZD0ShQ9E6MhmK7a/lano+JY4UPRE9tj6rU9HxLM30QnsbxaTTxvix59P41mXsbxadk08d4ofiU/jWOjtWDr0VcWYX69xHYYUqZGUwrAxOwXzZqLoh0v9HkdiOdmQ2Pqxd9lYq9yVdwvh5k5R6LZRoPznprGdYzSYw8LsVs/G1CFfKEGUlyo57E6AnqmtQoKgst+sklmPaTDWMjKeiZXFZBl8p6JGQ9EKBjPFDz/mnYPwBLYwfRDzv1kYTwBOfdXoxOtJtIAmhwEsBJCy6rJVjlWERJKJDokiqqkKiQiJDpTgCSnCrTjKUT0Qy4c9EgydoJamT0Mh/wCQhkTkjsEJtukRh6h6Mh/5rGaVE5F0+yvunP7fxrog6RWok1qlOKVUmqMmqkHhk5XdHqtOVwNK7gdYkHo8Lh1FMAjU75h7QSzET0SGY21V1vNxmsCpBwtSCm2KzztjHeQv9t/mlTtfHeQv9tvmm2VkFZrEYn8Wx3kL/bb5oLE4rGVENN0GVrXsljob9M38si0YENmUWWmoYWI3gxnGV6ip9GFYg3yuCb9ljvhbSCIGQds4v7pfVf8AWd/G8V90vq1P1mqVnZYwZf8AG8T90vqv+s7+NYn7tfVqfrNTLOyxgy/41ifu19Wp+s7+MYr7tfVf9ZqZZ2STBmfxfFfdr6r/ADThtPFeQvqP801MskJJist8RXcZXQAb+SpGvpMewqEKARYxgLLASYuqgSwWWAkhZRCrCKslVh6dOZaiESM06RhKVKNosClLDxynREqkKhgHRRCCDUy4MgzuEv8AKVexPjWO4UA06f4ae4TP4Tn6nW81PjWaGDP0dP8ADT4RMfb+L06pSBiVbDTRME4mqjGrYYweBo2cmazpAIljMhtd0ytoC4M1tyzKxnPNwefqCCjFcawNptimLSCITLIKzSB2kEQuWVIgCtIIhCJUiBS0i0tadaBW0m0taTaBS0sFlwJIWQUCywWWy9JA6ybDvi2I2jRQ2Lhz0U+X7pLVwwFkhYHC4nOpfIVW9lzEAt0m3RMThIa2QvTqMioLtTRiuZekEak9X7MV6PLCIkHs7DlaVNWuWWmgYnU5gov7Y8iQqqU4wiyqiEEiiLCrAqYVTAMhhVMXUwitIGVaEDRdWlg0BLhKfqdfzB8Sx7CN9HT/AA09wmbwjb6pX8wfEI5gn+jp/hp8ImfsdGy0qTKZ5BaaHNKqus4tIVt8gI50mXijNF20mbiTLBi4kaxeNV4vabYprOvSJU1k6e6IMxtr6ZUia1MPHEL1nulTiFiLC0XqvaTVw3itpIik215hfUxbBbYWotTTLUprfKb2N9AR6SL9sycU+tyfRM7CMTiUA0BD3HlAC9j6QD6I3yZ4espYx/tL3aRhcUp5vziTfvpg2a3NaBTg/stzUq1q1V3u75aed8i3JNrXtoLRnbu2FpfR01BqWuSxJRAd1wDcnquIjtra7YbDpSojNicRmqXAuKaMSFcjpIAAv0E81jlDBMVUaswGrMeUzHwixO8k3M1ndZ/yH8Lt+u5sRTOlyyo497mGqY+s+gfIP6QB7p2A2HVFI1OSb5iEUnOwXSw0t088Bs+qHqpTym2a7A6aLqb91pLfxYV2jTqI44wscyqwLsWDA84gsNWdqi010zHUgLcKNTzdF5t8LNrYdaWSoM1TwkVCC6nyupem++eX2LtJLu7KRoFBFiBfU+4d8fHtdepr4xwNGIAFgBzCTsShx9YGo9qVPlsTuJHgi3PqB3GeU2ntp7kU1uPKbUehRr3zV4PYtzh0Zmuzs7k6bs2QbvMmeUyavG7cfQateim+pc9S/wCZShjqbHkhmHSbAd08lSLO4F7zcUZFsLCZm1q5Gw+Npr9n2mZmL21T1FNCXPJW3g5juveZeKdm0BPbG+D2AueMYaL4PW37/esVG9hKZRAD4W9u0/u0YBlTOvCihpcNFw0kNIGVeXDxUPLB4C/CFvqlbzP/AGEawL/RU/w0+ETP26/1at5g+IRjAv8ARU/w0+ETP2D+aQXi+eQXlBi85H3xcvJR98oYd9JnYlo076RKs0QI1RFrRhzATbFIPU/xKmppr+zAMw6efXfaQX0gEzjnPVAVWHTfrlXYae/mEE7fnzQpTFP0e2I7Kf60l/JqflGsQ17/ALMW2GgbGKeZabt2m6gREr1TrF6h3k8w9lo4x/LTomfi2OUgb25O/pNv1lGUEZ6iMxubrcnyVGmnRYATWy2/e8xMpkAYatfLcg2GmvplsHUd6tNM2jOtwLDQG55ugGWy0mR7WjTyoij7KqO4TyPDPEjCstWiLV8QtRLkXVcuTM4G7NqB0a36b+pqP0nvJ3TxG3dopXcNTOZKeZA43M1+UV6RuF+rslkS14as7MxZyWZjdmYklj1kzX2ZRPFg28Is35flDVnHbGaajKo3WA3ae6OVSQpUw50IE0cLVCLkGmXm6L6n2kwQVr69otfW2uogcM2Zielj75i+W54e02FS5OY7zNKqOjWA2StqY7IDH11TUvqfs2PvGkeornosSFHh1GyLbm6T6Bcz0+GpBEVFBsotu3zzmwcWgD4qqTbM6Uh0IDYntJHsEZq8LaYNgnrH9JjKuxusekEeiVvPNPwzFvAXsLN+QjmyNtLXRmy5CrZbZs2ltDu7e6PPY2C07PA8YDIzwD55bPFs87PADtx/q1XzR8Qh8A/0VP8ADT4REdtP9XqeaPiEPgWtTpjopoPYJnsPcZINSLl5HGSg5eSj74sXko+/sgNM+kUqNLl9ItUeWATmCl2MpebYrz5f9+mVz9/SRKF9fdB5xf08xvKCNfn/AOoGof30Swa/Xpz88q49ndAQxD6GF4Ma4ioeimPQS3+DF8VbXrjvBKny673t4tAfWP5xCvQ1zu1tv38+sQZSxAHOSfRH8SOjvhX2VxmFLLpVZs6G5GZBpkPUdT22lDGEwNN8K9NyBnYlW0JVl0Dd+b0EzzOysTTTFFKjrmpcYGyksAQMvMOuC2zwgOHwtPD0jas6Eu240lZiT2MdbdG/onmNgN9I34Z+JZZGbfL0fCza1SrejR5FL/5HJytU6gN4T39m9TZmGZaKqQDfPfoN2J91oSsoYdfMf1jWFB4tQd4B9Gpi3Ism1jYnCuDoLg9l+6MV6LoeWjKN1yDaaa4cM63YasB7Zr7Tp4ZwyNUy35+LYgHmN+YzHy1r448yCuQsGzZRfoI6fZeK4AbpOJpGm1SmHDg03sVGhUC4a/f7Z2CO6Qe6w1YCmNbac0w9pVPCXmYXOYHvE08KeQNeaZW0NSbk3sZasGxDFMPQTXSmpI5rnnPXvnn6rEk3M9Pwgp2RB0DL6BYTzTKJpkFp6Lgi+lQeafynnyOabnBQ8qoP6R7xMcvTXH29UtW0MtWIM05Ks5xto8ZO4yKLUls80yptd/oKnmj4hDYV+QnmL7ohtd/oKnmj4hDYZ+Qnmj3TPYeLyM8XzyM80D55ZH3xTPLI++A4X0gGaRn0gy0QqzGDvOvIvNsPH8f0e+Wz9fMLw7cFsYOemeyo3ywtXgxiEUGo6C4BOXlW7yL900hdagHdKtU3RmnsdCNcSoboNKofapMzKuamSWAKhioYMp6QCRvW9ri4F4A8YZpcEHGWtfmqA/8ABZllHrECkjO3OqqWPbYc3XPRbA2DiadJyyqlR2LBajiw0CgnLfmG7rgTjsSAbXuTuFz6J6AY9EppTuWKIqkhSASB1mY3+16hXM1ZeOLlmbIzpl0sALg3vz3jVXYVVtWxC3POtIgfHCvB8JsJmxdZ82UOysLgk2Krf2gxXZ1AJUBzXuCu6w116eqe1xXAsu2ZsSdwUfRDQa/1dcD/ALBHNiT28UPml1nGVm6x3Sz4sLybX00N7TV/2RU/+0PTRPzwg4F1CuU4hGHMTRYEHqIeLZVmx5urinzAop0Isb8956qriagBWpTFROh1b2EajviicBaoOmJTT/8AJwfjnpaOExSAfTIxA3lHF/fM+GvLyW2sJ9VqVaaBFAXMA7PlAb+rUXDMN889gnvaex2xsHaOIcl8UiUcrKKaGplCsLNdbAMT0mI0eA9RNf8AUK3VxbL7cx90mTDaewNmpi9zpuGkC2HDVEUKbMyqS1+c80LhtiVF0eqR1pyh7bRmnhnSpTOdKuR1a18j2BH2TCg8ImGTTcWIHfPMsJ6Dars1KnmBRiWLKd6m50Mwn3/96zTIRE1uDJ5dTzPzEymmrwbPLqH+j8xMcvTXH233aCZpLNAsZybFSraHWpECZyvLGRtqv9BU7B8Qh6D8hfNHumdtGp9DU7B8QjOGfkJ5o90vYbzSM8CXkZ5QbPLI++LZ5ZH3wGlfSdmi6PLhoiUUGRKgzrzbLT5+6C214tPMX3Tp03Ga8um8+mdwlQGg1wDyV5h0idOk7Vt8FkC4LDFQFL01ZyABnbpa28zRqHX99U6dFWAod0k/v2SJ0irjn9Pug3Onf75M6QSx/KXpc3aPdOnQLj85DTp0KhvygzuPYJ06AFvtfvnMBVpqxp5gG5Y3gGdOlRkbSN6a315dT4zMVt3765M6VATumpwd8Kp5v/sJM6Y5elntrvBNOnTk6KmUM6dKAY7xVTsHxCN4XwF80Tp0T2yLIM6dNCDJTnnToF0l1kzoiVcTp06bZf/Z"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Living Room</h5>
+              <p class="card-text">You can control the living room by clicking below buttons.</p>
+              <a href="/A" class="btn btn-primary">On</a>
+              <a href="/a" class="btn btn-danger">Off</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 18rem;">
+            <img src="https://static.toiimg.com/photo/msid-78037736/78037736.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bed Room</h5>
+              <p class="card-text">You can control the bed room by clicking below buttons.</p>
+              <a href="/B" class="btn btn-primary">On</a>
+              <a href="/b" class="btn btn-danger">Off</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 18rem;">
+            <img src="https://www.homelane.com/blog/wp-content/uploads/2020/08/shutterstock_516757972.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Study Room</h5>
+              <p class="card-text">You can control the study room by clicking below buttons.</p>
+              <a href="/C" class="btn btn-primary">On</a>
+              <a href="/c" class="btn btn-danger">Off</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+  <!-- Section Contact -->
+  <section class="section section-follow myblack  white-text center mt-5">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-3 s12">
+          <p>Terms and Conditions</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>Privacy Policy</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>FAQs</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>Contact Us</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="section myblackdark white-text center">
+    <p>IOT Home Automation &copy; 2022</p>
+  </footer>
+
+</body>
+
+</html>

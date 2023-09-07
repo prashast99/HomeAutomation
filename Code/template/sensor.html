@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}
+IOT Home Automation | Temperature
+{% endblock %}
+
+{% block content %}
+<!--Navigation Bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="https://images.squarespace-cdn.com/content/v1/5979e18715d5db259166db64/1605089936689-2BUDHY5RFZ2W1OI8GYKG/Coloured+Logo.png" height="25px" width="25px" class="mx-3">
+      <a class="navbar-brand" href="index.html">IOT Home Automation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appliances.html">Appliances</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>Temperature</b></a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+<main class = "container">
+<!-- Temperature section -->
+
+<h3 class="text-center mt-5">Temperature & Humidity</h3>
+    <hr><br>
+
+<h4 class="text-center mt-2"> LIVE Sensor Data of Temperature & Humidity </h4><br>
+    <div class="row align-items-md-stretch mt-5">
+                <div class="col-md-6">
+                  <div class="h-100 p-5 text-white bg-dark rounded-3">
+                    <h3>Temperature</h3>
+		    <h3><strong> {{temperature}} </strong> °C</h3>
+                   <br>
+                    <button class="btn btn-outline-light text-light btn-danger" type="button">LIVE</button>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <h3>Humidity</h3>
+		    <h3><strong> {{humidity}} </strong> %</h3>
+                    <br>
+                    <button class="btn btn-outline-secondary text-light btn-danger" type="button">LIVE</button>
+                  </div>
+                </div>
+              </div>
+	<br><br>
+    </section>
+  </div>
+
+</main>
+
+  <!-- Section Contact -->
+  <section class="section section-follow myblack  white-text center mt-4">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-md-3 s12">
+          <p>Terms and Conditions</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>Privacy Policy</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>FAQs</p>
+        </div>
+        <div class="col-md-3 s12">
+          <p>Contact Us</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="section myblackdark white-text center">
+    <p>IOT Home Automation &copy; 2022</p>
+  </footer>
+
+
+{%  endblock  %}
