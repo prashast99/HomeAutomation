@@ -21,19 +21,20 @@ Make the appropriate connections of the RaspberryPi sensors on the controller.
 
 ## Screenshots
 
-![RaspBerry](/Pics/Raspberry.jpg)
+![RaspBerry](/Pics/Raspberry.png)
 
-![Sensor](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Sensor](/Pics/Sensor.jpg)
 
-![Setup](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Setup](/Pics/Setup.jpg)
 
-![Sensor](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Website](/Pics/Website.png)
 
-![LED](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![LED](/Pics/LED.png)
 
-![Result](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Result](/Pics/Result.jpg)
 
-![Temp](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Temp](/Pics/Temp.png)
+
 ## Tech Stack
 
 **Client:** HTML, CSS, JavaScript
