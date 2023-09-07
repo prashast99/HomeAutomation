@@ -29,15 +29,29 @@ RaspberryPi Micro-controller
 DHT11 - Temperature & Humidity Sensor <br />
 ![Sensor](/Pics/Sensor.jpg)
 
+<br />
+
 Setup of the Circuit
 ![Setup](/Pics/Setup.jpg)
 
+<br />
+
+Landing Page of Website
 ![Website](/Pics/Website.png)
 
+<br />
+
+Light Appliance control cluster webpage
 ![LED](/Pics/LED.png)
 
+<br />
+
+LED gets turned ON
 ![Result](/Pics/Result.jpg)
 
+<br />
+
+Live Temperature & Humidty display webpage
 ![Temp](/Pics/Temp.png)
 
 ## Tech Stack
