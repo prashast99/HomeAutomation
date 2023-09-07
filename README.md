@@ -40,4 +40,3 @@ Make the appropriate connections of the RaspberryPi sensors on the controller.
 
 **Server:** Flask, RaspberryPi
 
-# HomeAutomation
