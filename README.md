@@ -21,7 +21,7 @@ Make the appropriate connections of the RaspberryPi sensors on the controller.
 
 ## Screenshots
 
-![RaspBerry](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![RaspBerry](/Pics/Raspberry.jpg)
 
 ![Sensor](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
